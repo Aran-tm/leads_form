@@ -30,5 +30,9 @@
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
-    ],
+    ],   
+    # standard options for installation
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
