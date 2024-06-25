@@ -1,22 +1,21 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "leads_form",
+    'name': "Leads Form",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        This is an important module created for opportunities and leads at any enterprises""",
 
     'description': """
         Long description of module's purpose
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Armando Roberto Travieso",
+    'website': "https://github.com/Aran-tm/leads_form",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Leads',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
@@ -24,7 +23,7 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
