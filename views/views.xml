@@ -1,31 +1,26 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
     <record model="ir.ui.view" id="leads_form.list">
       <field name="name">leads_form list</field>
       <field name="model">leads_form.leads_form</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
     <record model="ir.actions.act_window" id="leads_form.action_window">
       <field name="name">leads_form window</field>
       <field name="res_model">leads_form.leads_form</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
-<!--
     <record model="ir.actions.server" id="leads_form.action_server">
       <field name="name">leads_form server</field>
       <field name="model_id" ref="model_leads_form_leads_form"/>
@@ -38,23 +33,20 @@
         }
       </field>
     </record>
--->
+
 
     <!-- Top menu item -->
-<!--
     <menuitem name="leads_form" id="leads_form.menu_root"/>
--->
+
     <!-- menu categories -->
-<!--
     <menuitem name="Menu 1" id="leads_form.menu_1" parent="leads_form.menu_root"/>
     <menuitem name="Menu 2" id="leads_form.menu_2" parent="leads_form.menu_root"/>
--->
+
     <!-- actions -->
-<!--
     <menuitem name="List" id="leads_form.menu_1_list" parent="leads_form.menu_1"
               action="leads_form.action_window"/>
     <menuitem name="Server to list" id="leads_form" parent="leads_form.menu_2"
               action="leads_form.action_server"/>
--->
+
   </data>
 </odoo>
