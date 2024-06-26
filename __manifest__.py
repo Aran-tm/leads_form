@@ -28,12 +28,11 @@
     # standard options for installation
     'installable': True,
     'application': True,
-    'auto_install': False,
-    'assets': {
-        'web.assets_backend': [
-            'leads_form/static/src/components/leads.xml',
-            'leads_form/static/src/components/leads.js'
-        ],
-    },
+    # 'assets': {
+    #     'web.assets_backend': [
+    #         'leads_form/static/src/components/leads.xml',
+    #         'leads_form/static/src/components/leads.js'
+    #     ],
+    # },
     'icon': 'leads_form/static/description/leads.png',
 }

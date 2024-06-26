@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
+        <!-- Renderiza el modelo webiste.page como una pagina -->
         <record id="add_leads" model="website.page">
             <field name="name">Conviertete en Socio</field>
             <field name="is_published" eval="True"/>
@@ -10,9 +11,61 @@
             <field name="arch" type="xml">
                 <t t-name="website_form.add_leads">
                     <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
+                        <div id="wrap" class="oe_empty"/>
+                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
 
-                            <!-- Content -->
+                                    <!-- Form obtained from bootstrap forms -->
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress2">Address 2</label>
+                                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                            <label for="inputCity">City</label>
+                                            <input type="text" class="form-control" id="inputCity"/>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                            <label for="inputState">State</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                            <label for="inputZip">Zip</label>
+                                            <input type="text" class="form-control" id="inputZip"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck"/>
+                                            <label class="form-check-label" for="gridCheck">
+                                                Check me out
+                                            </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                        </form>
+                                </div>
+                            </div>
                         </div>
                     </t>
                 </t>
