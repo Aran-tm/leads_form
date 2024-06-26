@@ -19,8 +19,8 @@
 
                                     <!-- Formulario obtenido de bootstrap -->
                                     <form action="/add-leads/" method="post" enctype="multipart/form-data" class="needs-validation">
-                                        <div class="container">
-                                            <h2 class="text-center mb-4">Formulario de Contacto</h2>
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <h2 class="text-center mb-4 mt-4">Formulario de Contacto</h2>
                                             <div class="row g-3">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
@@ -49,7 +49,7 @@
                                                     <div class="mb-3">
                                                         <label for="viaContacto" class="form-label">Vía de Contacto</label>
                                                         <select class="form-select" id="viaContacto" required="">
-                                                            <option selected>Seleccione una opción...</option>
+                                                            <option selected="selected">Seleccione una opción...</option>
                                                             <option value="email">Email</option>
                                                             <option value="telefono">Teléfono</option>
                                                             <option value="socialMedia">Redes Sociales</option>
@@ -57,7 +57,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <button type="submit" class="btn btn-primary mb-4">Enviar</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
