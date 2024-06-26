@@ -18,21 +18,47 @@
                                 <div class="col-lg-6">
 
                                     <!-- Formulario obtenido de bootstrap -->
-                                    <form>
-                                        <div class="mb-3 mt-3">
-                                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                                            <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                                    <form action="/add-leads/" method="post" enctype="multipart/form-data" class="needs-validation">
+                                        <div class="container">
+                                            <h2 class="text-center mb-4">Formulario de Contacto</h2>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="nombre" class="form-label">Nombre</label>
+                                                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required=""/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="apellidos" class="form-label">Apellidos</label>
+                                                        <input type="text" class="form-control" id="apellidos" placeholder="Tus apellidos" required=""/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="telefonoPersonal" class="form-label">Teléfono Personal</label>
+                                                        <input type="tel" class="form-control" id="telefonoPersonal" placeholder="Tu teléfono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                                                        <input type="email" class="form-control" id="correoElectronico" aria-describedby="emailHelp" required=""/>
+                                                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="diaContacto" class="form-label">Día de Contacto</label>
+                                                        <input type="date" class="form-control" id="diaContacto" required=""/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="viaContacto" class="form-label">Vía de Contacto</label>
+                                                        <select class="form-select" id="viaContacto" required="">
+                                                            <option selected>Seleccione una opción...</option>
+                                                            <option value="email">Email</option>
+                                                            <option value="telefono">Teléfono</option>
+                                                            <option value="socialMedia">Redes Sociales</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1"/>
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                                            <label class="form-check-label" for="exampleCheck1">Verificado</label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary mb-3">Enviar</button>
                                     </form>
                                 </div>
                             </div>
