@@ -23,9 +23,9 @@
 
     # always loaded
     'data': [
+        #datos nnecesarios para que se muestre el modulo
         'security/ir.model.access.csv',
-        'views/templates.xml',      #datos innecesarios para que se muestre el modulo
-        'views/views.xml'
+        'views/views.xml',   
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -34,10 +34,14 @@
     # standard options for installation
     'installable': True,
     'application': True,
-    'assets': {
-        'web.assets_backend': [
-            "leads_form/static/src/app/*"       #importar todo
-        ]
-    },
+    # 'assets': {
+    #     'web.assets_backend': [
+    #         'leads_form/static/src/app/leads.js',
+    #     ],
+    #     'web.assets_frontend': [
+    #         'leads_form/static/src/app/leads.xml',
+    #         'leads_form/static/src/app/leads.css'
+    #     ],
+    # },
     'auto_install': False,
 }
