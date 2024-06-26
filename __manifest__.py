@@ -19,29 +19,20 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'web'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
-        #datos necesarios para que se muestre el modulo
-        # 'security/ir.model.access.csv',
-        'views/views.xml',   
+        'views/leads.xml',   
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],   
     # standard options for installation
     'installable': True,
     'application': True,
-    # 'assets': {
-    #     'web.assets_backend': [
-    #         'leads_form/static/src/app/leads.js',
-    #     ],
-    #     'web.assets_frontend': [
-    #         'leads_form/static/src/app/leads.xml',
-    #         'leads_form/static/src/app/leads.css'
-    #     ],
-    # },
-    'auto_install': False,
+    'assets': {
+        'web.assets_backend': [
+            'leads_form/static/src/components/leads.xml',
+            'leads_form/static/src/components/leads.js'
+        ],
+    },
+    'icon': 'leads_form/static/description/leads.png',
 }

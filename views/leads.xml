@@ -1,3 +1,17 @@
-<templates id="template_id" name="template_name" xml:space="preserve">
-   <t t-name="owl.LeadsForm" owl="1">
-</templates>
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_simple_form" model="ir.ui.view">
+        <field name="name">simple.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Formulario Simple">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
