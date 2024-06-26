@@ -45,8 +45,8 @@
     <!-- actions -->
     <menuitem name="List" id="leads_form.menu_1_list" parent="leads_form.menu_1"
               action="leads_form.action_window"/>
-    <menuitem name="Server to list" id="leads_form" parent="leads_form.menu_2"
-              action="leads_form.action_server"/>
+    <!-- <menuitem name="Server to list" id="leads_form" parent="leads_form.menu_2"
+              action="leads_form.action_server"/> -->
 
   </data>
 </odoo>

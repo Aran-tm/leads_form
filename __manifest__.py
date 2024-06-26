@@ -24,6 +24,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/templates.xml',      #datos innecesarios para que se muestre el modulo
+        'views/views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -33,8 +35,8 @@
     'installable': True,
     'application': True,
     'assets': {
-        'web.assets': [
-
+        'web.assets_backend': [
+            "leads_form/static/src/app/*"       #importar todo
         ]
     },
     'auto_install': False,
