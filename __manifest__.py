@@ -23,8 +23,8 @@
 
     # always loaded
     'data': [
-        #datos nnecesarios para que se muestre el modulo
-        'security/ir.model.access.csv',
+        #datos necesarios para que se muestre el modulo
+        # 'security/ir.model.access.csv',
         'views/views.xml',   
     ],
     # only loaded in demonstration mode

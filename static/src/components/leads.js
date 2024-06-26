@@ -17,7 +17,7 @@ export class LeadsForm extends Component {
 
         // metodo on will start, se ejecuta a arrancar la aplicacion
         onWillStart(async () => {
-            
+
             console.log('onWillStart');
             this.state.title = 'Leads Form'
 
@@ -25,3 +25,9 @@ export class LeadsForm extends Component {
         })
     }
 }
+
+// para crear una template
+LeadsForm.template = 'owl.LeadsForm'
+
+// esto es para registrar la accion
+registry.category('actions').add('owl.leads', LeadsForm)

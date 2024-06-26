@@ -1,0 +1,3 @@
+<templates id="template_id" name="template_name" xml:space="preserve">
+   <t t-name="owl.LeadsForm" owl="1">
+</templates>
