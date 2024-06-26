@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'portal', 'web', 'website'],
 
     # always loaded
     'data': [
@@ -28,6 +28,7 @@
     # standard options for installation
     'installable': True,
     'application': True,
+    'auto_install': False,
     'assets': {
         'web.assets_backend': [
             'leads_form/static/src/components/leads.xml',

@@ -1,17 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <record id="view_simple_form" model="ir.ui.view">
-        <field name="name">simple.form</field>
-        <field name="model">res.partner</field>
-        <field name="arch" type="xml">
-            <form string="Formulario Simple">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="email"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+    <data>
+        <record id="add_leads" model="website.page">
+            <field name="name">Conviertete en Socio</field>
+            <field name="is_published" eval="True"/>
+            <field name="key">website_form.add_leads</field>
+            <field name="url">/leads</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="website_form.add_leads">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+
+                            <!-- Content -->
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
 </odoo>
