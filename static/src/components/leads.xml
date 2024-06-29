@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templates xml:space="preserve">
-    <t t-name="owl.OwlSalesDashboard" owl="1">
+
+<template xml:space="preserve">
+    <t t-name="owl.OwlLeadsForm" owl="1">
         <div class="container">
             <div class="row col-lg-12 col-md-12">
                 <div class="d-flex" style="display: flex; justify-content: center">
@@ -51,4 +52,4 @@
                 </div>
         </div> 
     </t>
-</templates>
+</template>

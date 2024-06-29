@@ -2,11 +2,14 @@
 <odoo>
     <data>
         <record id="action_owl_sales_dashboard" model="ir.actions.client">
-            <field name="name">Contact Form</field>
+            <field name="name">Contacto Form</field>
             <field name="tag">owl.sales_dashboard</field>
         </record>
-        <menuitem name="Leads Form" id="menu_owl_tutorial" sequence="10">
-            <menuitem name="Contact Form" id="menu_owl_sales_dashboard" sequence="10" action="action_owl_sales_dashboard"/>
+
+        <!-- Menu que se muestra en el panel lateral de la pagina -->
+        <menuitem name="Leads Form" id="menu_owl_tutorial" sequence="10"> 
+            <!-- Menu que se muestra en el header de la aplicacion -->           
+            <menuitem name="Contact Form" id="menu_owl_sales_dashboard" sequence="10" action="action_owl_sales_dashboard"/>                        
         </menuitem>
     </data>
 </odoo>

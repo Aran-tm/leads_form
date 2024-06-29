@@ -3,12 +3,12 @@
 import { registry } from "@web/core/registry"
 const { Component } = owl
 
-export class OwlSalesDashboard extends Component {
+export class OwlLeadsForm extends Component {
     setup(){
 
     }
 }
 
-OwlSalesDashboard.template = "owl.OwlSalesDashboard"
+OwlLeadsForm.template = "owl.OwlLeadsForm"
 
-registry.category("actions").add("owl.sales_dashboard", OwlSalesDashboard)
+registry.category("actions").add("owl.sales_dashboard", OwlLeadsForm)
