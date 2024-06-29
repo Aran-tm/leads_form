@@ -7,9 +7,9 @@
         </record>
 
         <!-- Menu que se muestra en el panel lateral de la pagina -->
-        <menuitem name="Leads Form" id="menu_owl_tutorial" sequence="10"> 
+        <menuitem name="Leads Form" id="menu_owl_leads" sequence="10"> 
             <!-- Menu que se muestra en el header de la aplicacion -->           
-            <menuitem name="Contact Form" id="menu_owl_sales_dashboard" sequence="10" action="action_owl_leads_form"/>                        
+            <menuitem name="Contact Form" id="menu_owl_leads_form" sequence="10" action="action_owl_leads_form"/>                        
         </menuitem>
     </data>
 </odoo>
