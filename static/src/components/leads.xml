@@ -26,7 +26,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-5">
                                         <label for="correoElectronico" class="form-label">Correo Electrónico</label>
-                                        <input type="email" class="form-control" id="correoElectronico" aria-describedby="emailHelp" required=""/>
+                                        <input placeholder="Correo Electrónico" type="email" class="form-control" id="correoElectronico" aria-describedby="emailHelp" required=""/>
                                         <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
                                     </div>
                                     <div class="mb-5">
