@@ -11,4 +11,4 @@ export class OwlLeadsForm extends Component {
 
 OwlLeadsForm.template = "owl.OwlLeadsForm"
 
-registry.category("actions").add("owl.sales_dashboard", OwlLeadsForm)
+registry.category("actions").add("owl.leads_form", OwlLeadsForm)
