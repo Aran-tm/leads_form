@@ -2,7 +2,7 @@
 from odoo import models, fields
 
 class TestModel(models.Model):
-    _name = 'leads.form'
+    _name = 'leads.leads'
     
     nombre = fields.Char(string='Nombre')
     apellidos = fields.Char(string='Apellidos')

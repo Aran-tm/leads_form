@@ -5,7 +5,6 @@ const { Component } = owl
 
 export class OwlLeadsForm extends Component {
     setup(){
-
     }
 }
 
