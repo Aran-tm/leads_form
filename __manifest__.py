@@ -32,6 +32,7 @@
         'web.assets_backend': [
             'leads_form/static/src/components/**/*.js',
             'leads_form/static/src/components/**/*.xml',
+            'leads_form/static/src/components/**/*.css',
         ],
     },
     'icon': 'leads_form/static/description/leads.png',

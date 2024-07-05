@@ -4,11 +4,11 @@ from odoo import models, fields
 class TestModel(models.Model):
     _name = 'leads.leads'
     
-    nombre = fields.Char(string='Nombre')
-    apellidos = fields.Char(string='Apellidos')
-    telefono_personal = fields.Char(string='Teléfono Personal')
+    nombre_apellidos = fields.Char(string='Nombre y Apellidos')
     correo_electronico = fields.Char(string='Correo Electrónico')
-    dia_contacto = fields.Date(string='Día de Contacto')
+    telefono_personal = fields.Char(string='Teléfono Personal')
+    experiencia = fields.Char(string='Años de Experiencia')
+    fecha_nacimiento = fields.Date(string='Fecha de Nacimiento')
     via_contacto = fields.Selection([
         ('email', 'Email'),
         ('telefono', 'Teléfono'),

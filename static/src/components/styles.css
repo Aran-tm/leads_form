@@ -1,0 +1,45 @@
+/* Estilos para mi template de owl */
+
+.submitButton {
+    background-color: #007bff !important; /* Color azul primario de Bootstrap */
+    border-color: #007bff !important;
+}
+
+.submitButton:hover {
+    background-color: #3c96f5 !important; /* Color azul para el hover  */
+    border-color: #2188f7 !important;
+}
+
+.botonesForm {
+    max-width: 120px;
+    border-radius: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imagenForm {
+    max-width: 95px;
+    max-height: 95px;
+}
+
+.imagenForm img {
+    max-width: 85px;
+    max-height: 85px;
+}
+
+.o_action_manager{
+    background-color: white;
+}
+
+input {
+    width: 180px;
+    border-radius: 10px;
+}
+
+input:hover, select:hover{
+    border-color: #007bff !important;
+}
