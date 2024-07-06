@@ -35,6 +35,8 @@ export class OwlLeadsForm extends Component {
 
         // muestro la data por consola
         console.log(leadData)
+
+        await this.orm.create("leads.leads", [leadData]);
     }
 }
 

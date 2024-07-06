@@ -10,7 +10,7 @@ class MyLeads(models.Model):
     experience = fields.Integer(string='Años de Experiencia')
     birth_date = fields.Date(string='Fecha de Nacimiento')
     contact_method = fields.Selection([
-        ('email', 'Correo Electrónico'),
+        ('email', 'Correo Electronico'),
         ('phone', 'Teléfono'),
         ('social_media', 'Redes Sociales'),
     ], string='¿Cómo supiste de nosotros?')

@@ -42,7 +42,7 @@
                                         <label for="via_contacto" class="form-label">¿Cómo supiste de nosotros?</label>
                                         <select name="via_contacto" class="form-select" id="via_contacto" required="">
                                             <option selected="selected">Seleccione una opción...</option>
-                                            <option id="correoElectronico">Email</option>
+                                            <option id="correoElectronico">Correo Electronico</option>
                                             <option id="numeroMovil">Teléfono</option>
                                             <option id="redesSociales">Redes Sociales</option>
                                         </select>
