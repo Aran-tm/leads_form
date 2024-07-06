@@ -28,6 +28,7 @@
                             <field name="phone"/>
                             <field name="experience"/>
                             <field name="birth_date"/>
+                            <field name="contact_method"/>
                         </group>
                     </sheet>
                 </form>

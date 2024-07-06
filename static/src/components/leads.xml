@@ -11,7 +11,7 @@
                 </div>
                 
                 <div class="d-flex" style="display: flex; justify-content: center;">
-                    <form action="/contactus-thank-you" class="mt-4" name="test_model" method="post" enctype="multipart/form-data">
+                    <form t-on-submit="handleSubmit" class="mt-4" name="test_model" method="post" enctype="multipart/form-data">
                         <div class="container">
                             <h2 class="text-center mb-4 mt-4">Formulario de Oportunidades (Leads)</h2>
                             <div class="row mt-5 g-6">
@@ -38,10 +38,14 @@
                                         <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
                                         <input style="min-width: 200px" type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" required=""/>
                                     </div>
+                                    <div class="mb-5">
+                                        <label for="contact_method" class="form-label">¿Cómo supiste de nosotros?</label>
+                                        <input style="min-width: 200px" type="text" class="form-control" name="contact_method" id="contact_method" required="" placeholder="Escriba su respuesta"/>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row botones">                            
-                                <button style="display: flex; justify-content: space-evenly;; align-items: center" type="submit" class="botonesForm btn btn-primary submitButton mt-2" id="sendButton" t-on-submit="handleSubmit">
+                                <button style="display: flex; justify-content: space-evenly; align-items: center" type="button" class="botonesForm btn btn-primary submitButton mt-2" id="sendButton" >
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
                                     Enviar
                                 </button>                                
