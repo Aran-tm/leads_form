@@ -23,6 +23,7 @@
 
     # always loaded
     'data': [
+        'security/ir.model.access.csv',
         'views/leads.xml',   
     ],
     # standard options for installation
