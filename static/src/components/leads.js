@@ -16,32 +16,21 @@ export class OwlLeadsForm extends Component {
         console.log("Data visualizada");
     }
 
-    // manejar formulario
-    // handleSubmit = (event) => {
+    //manejar formulario
+    handleSubmit = (event) => {
 
-    //     // Prevenir el comportamiento predeterminado del formulario
-    //     event.preventDefault();
+        // Prevenir el comportamiento predeterminado del formulario
+        event.preventDefault();
 
-    //     console.log("Datos enviados correctamente");
-    //     alert("Datos enviados correctamente");
+        console.log("Datos enviados correctamente");
+        alert("Datos enviados correctamente");
 
-    //     // Crear un objeto FormData a partir del formulario
-    //     const formData = new FormData(event.target);
+        // Datos capturados por el formulario para poder almacenarlos en la base de datos
+        // Accede al valor del campo de entrada
+        const nombreApellidos = event.target.elements.nombre_apellidos.value;
 
-    //     fetch('/mi_endpoint', {
-    //         method: 'POST',
-    //         body: formData,
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log('Respuesta:', data);
-    //         // Aquí puedes manejar la respuesta del servidor
-    //     })
-    //     .catch(error => {
-    //         console.error('Error:', error);
-    //         // Manejar errores
-    //     });
-    // }
+        alert("Datos enviados correctamente", nombreApellidos);
+    }
 }
 
 // nombre del template XML

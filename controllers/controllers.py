@@ -1,22 +1,9 @@
-# # controllers/main.py
-# from odoo import http
-# from.models.leads import Leads
-
-# class ProspectController(http.Controller):
-
-#     @http.route('/api/prospects', type='json', auth='public')
-#     def create_prospect(self, name, email, phone=None, **kw):
-#         values = {'name': name, 'email': email, 'phone': phone}
-#         prospect = Prospect.create(values)
-#         return {'id': prospect.id, 'message': 'Prospect creado exitosamente'}
-
-
 from odoo import http
-from odoo.http import request
-import json
 
-class LeadsFormController(http.Controller):
-
-    @http.route('/api/prospects', type='http', auth='public', website=True, csrf=False)
-    def add_leads(self, **post):
-        return json.dumps({'success': True})
+class MyController(http.Controller):
+    @http.route('/tu_ruta_en_el_servidor', type='http', auth='public', methods=['POST'], csrf=False)
+    def handle_form_submission(self, **kwargs):
+        # Aquí puedes procesar los datos del formulario recibidos en kwargs
+        # Por ejemplo, imprimir los datos en la consola para depurar
+        print(kwargs)
+        return "Datos recibidos correctamente"

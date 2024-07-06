@@ -11,7 +11,7 @@
                 </div>
                 
                 <div class="d-flex" style="display: flex; justify-content: center;">
-                    <form name="test_model" action="/contactus-thank-you" method="post" enctype="multipart/form-data">
+                    <form class="mt-4" name="test_model" action="/tu_ruta_en_el_servidor" method="post" enctype="multipart/form-data">
                         <div class="container">
                             <h2 class="text-center mb-4 mt-4">Formulario de Oportunidades (Leads)</h2>
                             <div class="row mt-5 g-6">

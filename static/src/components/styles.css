@@ -36,10 +36,16 @@
 }
 
 input {
-    width: 180px;
-    border-radius: 10px;
+    width: 220px;
+    border-radius: 5px;
 }
 
 input:hover, select:hover{
     border-color: #007bff !important;
+}
+
+form {
+    border-radius: 20px;
+    height: 420px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
 }
