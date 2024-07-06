@@ -10,10 +10,33 @@ export class OwlLeadsForm extends Component {
         
     // }
 
+    /* 
+    
+    <input t-ref="miCampoEntrada" type="text" placeholder="Escribe algo...">
+
+    class MiComponente extends Component {
+        miMetodo() {
+            const valorDelCampo = this.$refs.miCampoEntrada.value;
+            console.log(valorDelCampo); // Imprime el valor del campo de entrada
+        }
+    }
+
+    */
+
     // visualizar datos
-    visualizarData() {
+    visualizarData = (event) => {
 
         console.log("Data visualizada");
+
+        const nombre_apellidos = document.getElementById('nombre_apellidos').value;
+        const correo_electronico = document.getElementById('correo_electronico').value;
+        const telefono_personal = document.getElementById('telefono_personal').value;
+        const experiencia = document.getElementById('experiencia').value;
+        const fecha_nacimiento = document.getElementById('fecha_nacimiento').value;
+        const via_contacto = document.getElementById('via_contacto').value;
+
+        console.log("Datos enviados correctamente",
+             nombre_apellidos, correo_electronico, telefono_personal, experiencia, fecha_nacimiento, via_contacto);
     }
 
     //manejar formulario
@@ -22,14 +45,17 @@ export class OwlLeadsForm extends Component {
         // Prevenir el comportamiento predeterminado del formulario
         event.preventDefault();
 
-        console.log("Datos enviados correctamente");
-        alert("Datos enviados correctamente");
-
         // Datos capturados por el formulario para poder almacenarlos en la base de datos
-        // Accede al valor del campo de entrada
-        const nombreApellidos = event.target.elements.nombre_apellidos.value;
+        const nombre_apellidos = document.getElementById('nombre_apellidos').value;
+        const correo_electronico = document.getElementById('correo_electronico').value;
+        const telefono_personal = document.getElementById('telefono_personal').value;
+        const experiencia = document.getElementById('experiencia').value;
+        const fecha_nacimiento = document.getElementById('fecha_nacimiento').value;
+        const via_contacto = document.getElementById('via_contacto').value;
 
-        alert("Datos enviados correctamente", nombreApellidos);
+        console.log("Datos enviados correctamente",
+             nombre_apellidos, correo_electronico, telefono_personal, experiencia, fecha_nacimiento, via_contacto);
+        
     }
 }
 
