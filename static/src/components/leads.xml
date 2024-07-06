@@ -38,15 +38,6 @@
                                         <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
                                         <input style="min-width: 200px" type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" required=""/>
                                     </div>
-                                    <div class="mb-5">
-                                        <label for="via_contacto" class="form-label">¿Cómo supiste de nosotros?</label>
-                                        <select name="via_contacto" class="form-select" id="via_contacto" required="">
-                                            <option selected="selected">Seleccione una opción...</option>
-                                            <option id="correoElectronico">Correo Electronico</option>
-                                            <option id="numeroMovil">Teléfono</option>
-                                            <option id="redesSociales">Redes Sociales</option>
-                                        </select>
-                                    </div>
                                 </div>
                             </div>
                             <div class="row botones">                            

@@ -11,6 +11,7 @@ export class OwlLeadsForm extends Component {
     // inicializo servicios y funciones
     setup(){
 
+        // utilizo el servicio orm
         this.orm = useService("orm");
     }
 
@@ -22,7 +23,6 @@ export class OwlLeadsForm extends Component {
         const telefono_personal = document.getElementById('telefono_personal').value;
         const experiencia = document.getElementById('experiencia').value;
         const fecha_nacimiento = document.getElementById('fecha_nacimiento').value;
-        const via_contacto = document.getElementById('via_contacto').value;
 
         const leadData = {
             name: nombre_apellidos,
@@ -30,7 +30,6 @@ export class OwlLeadsForm extends Component {
             phone: telefono_personal,
             experience: experiencia,
             birth_date: fecha_nacimiento,
-            contact_method: via_contacto
         } 
 
         // muestro la data por consola
