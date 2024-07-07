@@ -2,30 +2,19 @@
 
 import { registry } from "@web/core/registry"
 import { useService } from "@web/core/utils/hooks";
-
-const { Component } = owl;
+import { useState, Component } from "@odoo/owl"            // importacion del state 
 
 // clase LeadsForm que extiende de la principal Component
 export class OwlLeadsForm extends Component { 
-
-    // Inicializamos el estado del componente
-    leadsData = [
-        {
-            id: 47,
-            name: 'Armando Roberto Travieso Montes',
-            email: 'armandortmontes@gmail.com',
-            phone: '1234567890',
-            experience: 3,            
-            birth_date: '2024-07-24',
-            contact_method: 'Email'
-        }
-    ];
 
     // inicializo servicios y funciones
     setup(){
 
         // utilizo el servicio orm
         this.orm = useService("orm");
+
+        // esto es una variable reactiva
+        this.state = useState({leadsData: []});
     }
 
     // visualizar datos
@@ -61,8 +50,6 @@ export class OwlLeadsForm extends Component {
     // consulta para obtener todos los datos del modelo leads.leads
     async visualizar(){
 
-        console.log("Hola Mundo");
-
         // busco todos los id existentes en los registros
         const registrosIds = await this.orm.search("leads.leads", []);
 
@@ -72,12 +59,12 @@ export class OwlLeadsForm extends Component {
                 ("leads.leads", [id], ["id", "name", "experience", "email", "birth_date", "phone", "contact_method"]))
         );
 
-        this.leadsData = data.flat();
+        this.state.leadsData = data.flat();
 
         // aplano el arreglo para que quede en uno solo
         console.log("Data leads", data.flat());
         console.log("Arreglo Leads", this.leadsData);
-    }    
+    }   
 }
 
 // nombre del template XML

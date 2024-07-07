@@ -86,7 +86,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <t t-foreach="leadsData" t-as="leads" t-key="leads.id">
+                        <t t-foreach="state.leadsData" t-as="leads" t-key="leads.id">
                             <tr>
                                 <td t-esc="leads.id"></td>
                                 <td t-esc="leads.name"></td>
