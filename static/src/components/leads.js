@@ -50,7 +50,15 @@ export class OwlLeadsForm extends Component {
 
         console.log("Hola Mundo");
 
-        const datos = await this.orm.read("leads.leads", [], ["name", "email"], {limit: -1});
+        // busco todos los id existentes en los registros
+        const registrosIds = await this.orm.search("leads.leads", []);
+
+        // consulto la base de datos y obtengo los campos gracias a los IDs
+        const datos = await Promise.all(
+            registrosIds.map(id => this.orm.read
+                ("leads.leads", [id], ["id", "name", "experience", "email", "birth_date", "phone", "contact_method"]))
+        );
+
         console.log(datos);
     }
 }
