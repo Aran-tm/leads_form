@@ -41,6 +41,17 @@ export class OwlLeadsForm extends Component {
         console.log(leadData)
 
         await this.orm.create("leads.leads", [leadData]);
+
+        alert("Datos enviados correctamente!");
+    }
+
+    // consulta para obtener todos los datos del modelo leads.leads
+    async visualizar(){
+
+        console.log("Hola Mundo");
+
+        const datos = await this.orm.read("leads.leads", [], ["name", "email"], {limit: -1});
+        console.log(datos);
     }
 }
 
