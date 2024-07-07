@@ -6,7 +6,20 @@ import { useService } from "@web/core/utils/hooks";
 const { Component } = owl;
 
 // clase LeadsForm que extiende de la principal Component
-export class OwlLeadsForm extends Component {   
+export class OwlLeadsForm extends Component { 
+
+    // Inicializamos el estado del componente
+    leadsData = [
+        {
+            id: 47,
+            name: 'Armando Roberto Travieso Montes',
+            email: 'armandortmontes@gmail.com',
+            phone: '1234567890',
+            experience: 3,            
+            birth_date: '2024-07-24',
+            contact_method: 'Email'
+        }
+    ];
 
     // inicializo servicios y funciones
     setup(){
@@ -54,13 +67,17 @@ export class OwlLeadsForm extends Component {
         const registrosIds = await this.orm.search("leads.leads", []);
 
         // consulto la base de datos y obtengo los campos gracias a los IDs
-        const datos = await Promise.all(
+        const data = await Promise.all(
             registrosIds.map(id => this.orm.read
                 ("leads.leads", [id], ["id", "name", "experience", "email", "birth_date", "phone", "contact_method"]))
         );
 
-        console.log(datos);
-    }
+        this.leadsData = data.flat();
+
+        // aplano el arreglo para que quede en uno solo
+        console.log("Data leads", data.flat());
+        console.log("Arreglo Leads", this.leadsData);
+    }    
 }
 
 // nombre del template XML

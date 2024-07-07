@@ -56,3 +56,23 @@ form {
 .btn-secondary {
     margin-right: 10px;
 }
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    max-height: 500px;
+}
+
+.modal-content {
+    min-width: 900px;
+}
+
+.eliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    align-content: center;
+}
