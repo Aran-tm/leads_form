@@ -45,6 +45,9 @@ export class OwlLeadsForm extends Component {
 
         await this.orm.create("leads.leads", [leadData]);
 
+        // esto lo hago para limpiar todos los campos del formulario
+        document.getElementById("myForm").reset();
+
         alert("Datos enviados correctamente!");
     }
 
@@ -73,7 +76,7 @@ export class OwlLeadsForm extends Component {
         // elimina registro. Hacerlo asincrono
         await this.orm.unlink("leads.leads", [leads.id]);
 
-        // esto actualiza la vista 
+        // esto actualiza la vista nuevamente con los registros que existan
         await this.visualizar();
     }
 }

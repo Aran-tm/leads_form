@@ -11,7 +11,7 @@
                 </div>
                 
                 <div class="d-flex" style="display: flex; justify-content: center;">
-                    <form class="mt-4" name="test_model" method="post" enctype="multipart/form-data">
+                    <form class="mt-4" name="test_model" method="post" enctype="multipart/form-data" id="myForm">
                         <div class="container">
                             <h2 class="text-center mb-4 mt-4">Formulario de Oportunidades (Leads)</h2>
                             <div class="row mt-5 g-6">
@@ -87,22 +87,7 @@
                     </thead>
                     <tbody>
                         <t t-foreach="state.leadsData" t-as="leads" t-key="leads.id">
-                            <!-- <tr>
-                                <td t-esc="leads.id"></td>
-                                <td t-esc="leads.name"></td>
-                                <td t-esc="leads.email"></td>
-                                <td t-esc="leads.phone"></td> 
-                                <td t-esc="leads.experience"></td>
-                                <td t-esc="leads.birth_date"></td>
-                                <td t-esc="leads.contact_method"></td>
-                                <td>
-                                    <div class="eliminar">
-                                        <button type="button" class="btn btn-danger" id="deleteLead" name="deleteLead" t-on-click="() => deleteLead(leads)">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                                        </button>
-                                    </div>                                
-                                </td> 
-                            </tr> -->
+
                             <!-- Llamo al nuevo componente para obtener sus datos (comunicacion padre - hijo )-->
                             <OwlItem leads="leads" onDelete.bind="deleteLead" />
                         </t>                       
