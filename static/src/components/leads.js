@@ -3,6 +3,7 @@
 import { registry } from "@web/core/registry"
 import { useService } from "@web/core/utils/hooks";         // importacion para utilizar ORM 
 import { useState, Component } from "@odoo/owl"            // importacion del state y del Component
+import { OwlItem } from '@leads_form/components/item';      // importacion de un nuevo componente
 
 // clase LeadsForm que extiende de la principal Component
 export class OwlLeadsForm extends Component { 
@@ -67,14 +68,19 @@ export class OwlLeadsForm extends Component {
     }   
 
     // funcion para eliminar un lead teniendo en cuenta su id
-    deleteLead(id) {
+    async deleteLead(leads) {
 
-        console.log("Id a eliminar", id);
+        // elimina registro. Hacerlo asincrono
+        await this.orm.unlink("leads.leads", [leads.id]);
+
+        // esto actualiza la vista 
+        await this.visualizar();
     }
 }
 
 // nombre del template XML
 OwlLeadsForm.template = "owl.OwlLeadsForm"
+OwlLeadsForm.components = { OwlItem };
 
 // registrar
 registry.category("actions").add("owl.leads_form", OwlLeadsForm)
