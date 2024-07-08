@@ -1,8 +1,8 @@
 /** @odoo-module */
 
 import { registry } from "@web/core/registry"
-import { useService } from "@web/core/utils/hooks";
-import { useState, Component } from "@odoo/owl"            // importacion del state 
+import { useService } from "@web/core/utils/hooks";         // importacion para utilizar ORM 
+import { useState, Component } from "@odoo/owl"            // importacion del state y del Component
 
 // clase LeadsForm que extiende de la principal Component
 export class OwlLeadsForm extends Component { 
@@ -17,7 +17,7 @@ export class OwlLeadsForm extends Component {
         this.state = useState({leadsData: []});
     }
 
-    // visualizar datos
+    // simula el submit en el formulario
     handleSubmit = async (event) => {
 
         // previene el comportamiento del envio del formulario
@@ -65,6 +65,22 @@ export class OwlLeadsForm extends Component {
         console.log("Data leads", data.flat());
         console.log("Arreglo Leads", this.leadsData);
     }   
+
+    // funcion para eliminar un lead teniendo en cuenta su id
+    async deleteLead(id) {
+
+        console.log("Id a eliminar", id);
+
+        // intento eliminar el registro de la base de datos
+        try {
+            // Llama al método unlink del servicio ORM pasando el modelo y el ID del registro a eliminar
+            await this.orm.unlink("leads.leads", [id]);
+            console.log(`Registro con ID ${id} eliminado correctamente.`);
+            // Puedes actualizar el estado o realizar cualquier otra acción después de la eliminación si es necesario
+        } catch (error) {
+            console.error(`Error al eliminar el registro con ID ${id}:`, error);
+        }
+    }
 }
 
 // nombre del template XML
