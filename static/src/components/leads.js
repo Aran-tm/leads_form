@@ -51,7 +51,9 @@ export class OwlLeadsForm extends Component {
 
         // esto mer permite mostrar el modal
         // Dispara el evento de click en el elemento invisible para abrir el modal
-        var buttonClick = document.getElementById('openModalTrigger');
+        let buttonClick = document.getElementById('openModalTrigger');
+
+        // si existe el boton, procedemos a abrirlo dando clicl
         if (buttonClick) {
             buttonClick.click();
         }

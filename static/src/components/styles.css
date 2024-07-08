@@ -86,3 +86,14 @@ td {
     display: flex;
     justify-content: space-around;
 }
+
+.botonCerrarRegistro {
+    margin-right: 25px;
+}
+
+.guardarRegistro {
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
