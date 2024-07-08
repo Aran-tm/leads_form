@@ -67,19 +67,9 @@ export class OwlLeadsForm extends Component {
     }   
 
     // funcion para eliminar un lead teniendo en cuenta su id
-    async deleteLead(id) {
+    deleteLead(id) {
 
         console.log("Id a eliminar", id);
-
-        // intento eliminar el registro de la base de datos
-        try {
-            // Llama al método unlink del servicio ORM pasando el modelo y el ID del registro a eliminar
-            await this.orm.unlink("leads.leads", [id]);
-            console.log(`Registro con ID ${id} eliminado correctamente.`);
-            // Puedes actualizar el estado o realizar cualquier otra acción después de la eliminación si es necesario
-        } catch (error) {
-            console.error(`Error al eliminar el registro con ID ${id}:`, error);
-        }
     }
 }
 
