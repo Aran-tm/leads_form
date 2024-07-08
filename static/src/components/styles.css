@@ -57,13 +57,13 @@ form {
     margin-right: 10px;
 }
 
-.modal-dialog {
+.tablaDatosDialog {
     display: flex;
     justify-content: center;
     max-height: 500px;
 }
 
-.modal-content {
+.tablaDatos {
     min-width: 900px;
 }
 
@@ -79,4 +79,10 @@ td {
 
 #listarLeads {
     min-width: 150px;
+}
+
+.botonAceptar {
+    min-width: 120px;
+    display: flex;
+    justify-content: space-around;
 }

@@ -43,12 +43,18 @@ export class OwlLeadsForm extends Component {
         // muestro la data por consola
         console.log(leadData)
 
+        // creo los datos en la base de datos ( insert )
         await this.orm.create("leads.leads", [leadData]);
 
         // esto lo hago para limpiar todos los campos del formulario
         document.getElementById("myForm").reset();
 
-        alert("Datos enviados correctamente!");
+        // esto mer permite mostrar el modal
+        // Dispara el evento de click en el elemento invisible para abrir el modal
+        var buttonClick = document.getElementById('openModalTrigger');
+        if (buttonClick) {
+            buttonClick.click();
+        }
     }
 
     // consulta para obtener todos los datos del modelo leads.leads
