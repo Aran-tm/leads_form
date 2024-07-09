@@ -2,19 +2,23 @@
 
 <template id="action_owl_leads_form" model="ir.actions.client" xml:space="preserve">
     <t t-name="owl.OwlLeadsForm" owl="1">
-        <div class="container mt-4">
-            <div class="row col-lg-12 col-md-12 d-flex justify-content-center">
 
+        <div class="shapedividers_com-9602"></div>
+
+        <div class="contenedorForm container">
+
+            <!-- Contenedor para el formulario -->
+            <div class="row col-lg-12 col-md-12 d-flex justify-content-center">
                 <!-- Aquí es donde agregas la imagen -->
                 <div class="imagenForm d-flex justify-content-center">
-                    <img src="https://www.shubhbank.com/wp-content/uploads/2017/12/quick-processing-of-leads.png" alt="Descripción de la imagen" />
+                    <img src="/leads_form/static/description/dog.png" alt="Descripción de la imagen" />
                 </div>
                 
                 <div class="d-flex" style="display: flex; justify-content: center;">
-                    <form class="mt-4" name="test_model" method="post" enctype="multipart/form-data" id="myForm">
+                    <form name="test_model" method="post" enctype="multipart/form-data" id="myForm">
                         <div class="container">
-                            <h2 class="text-center mb-4 mt-4">Formulario de Oportunidades (Leads)</h2>
-                            <div class="row mt-5 g-6">
+                            <h2 class="text-center mt-4 mb-4">Formulario de Oportunidades (Leads)</h2>
+                            <div class="row mt-3 g-6">
                                 <div class="col-md-6">
                                     <div class="mb-5">
                                         <label for="nombre_apellidos" class="form-label">Nombre y Apellidos</label>
@@ -129,6 +133,6 @@
                 </div>
                 </div>
             </div>
-        </div>
+        </div>        
     </t>
 </template> 
